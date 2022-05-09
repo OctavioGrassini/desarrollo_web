@@ -1,0 +1,36 @@
+.instrucciones
+{
+    h3
+    {
+        font-family: 'Nunito', sans-serif;
+        font-size: 35px;
+        padding: 10px;
+        background-color: #32333842;
+        margin: 20px 20px 0px 0px;
+    }
+    
+    li
+    {
+        list-style: none;
+        font-family: 'Nunito', sans-serif;
+        font-weight: 500;
+        font-size: 20px;
+        color: #24252a;
+        text-decoration: none;
+        padding-bottom: 10px;
+    }
+}
+
+.compra_wsp
+{
+    margin: 15px 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.compra_ig
+{
+    margin: 15px 25px;
+    display: flex;
+    flex-direction: column;
+}
