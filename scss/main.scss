@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grape+Nuts&family=Roboto:wght@100&display=swap');
+
+$gris1: #24252a;
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;   
+}
+
+body
+{
+    background-color: whitesmoke;
+    background-image:url("../Imagenes/main_background.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment:fixed;
+}
+
+.main_wrapper
+{
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer"
+    ;
+}
+
+//Imports
+@import "header";
+@import "footer";
+@import "index";
+@import "productos";
+@import "galeria";
+@import "como-comprar";
+@import "contacto";
+

@@ -1,0 +1,68 @@
+.contacto
+{
+    display:flex;
+    justify-content: space-between;
+}
+
+.form
+{
+    margin: 30px;
+    display: flex;
+    justify-content:left;
+    flex-direction: column;
+    align-items: flex-start;
+    width: auto;
+    padding: 20px;
+
+    .input
+    {
+        padding: 15px;
+    }
+
+    h2
+    {
+        font-family: 'Nunito', sans-serif;
+        font-size: 35px;
+        padding: 10px;
+        background-color: #32333842;
+    }
+
+    h3
+    {
+        font-family: 'Nunito', sans-serif;
+        font-size: 20px;
+    }
+}
+
+.contact_info
+{
+    margin: 30px;
+    display: flex;
+    justify-content:left;
+    flex-direction: column;
+    align-items: flex-start;
+    width: auto;
+    padding: 20px;
+
+    h2
+    {
+        font-family: 'Nunito', sans-serif;
+        font-size: 35px;
+        padding: 10px;
+        background-color: #32333842;
+    }
+
+    li
+    {
+        font-family: 'Nunito', sans-serif;
+        font-size: 20px;
+        padding: 10px 0px;
+        margin-left: 20px;
+        list-style: none;
+    }
+
+    ul
+    {
+        padding-top: 20px;
+    }
+}

@@ -1,0 +1,58 @@
+.productos
+{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 40px 0px;
+}
+
+.item
+{
+    padding: 20px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:hover
+    {
+        background-color: #32333852;
+        border-radius: 7px;
+    }
+
+    h5
+    {
+        margin: 5%;
+        padding: 5%;
+        font-family: 'Grape Nuts', cursive;
+        font-size: 25px;
+        background-color: #32333837;
+    }
+
+    img
+    {
+        border-style: groove;
+        border-radius: 7px;
+        border-width: 5px;
+        border-color: rgb(206, 104, 31);
+    }
+}
+
+//Responsive
+
+@media only screen and (max-width: 1050px)
+{
+    .item
+    {
+        border-style: solid;
+        border-radius: 10px;
+        border-color: #3233385e;
+        margin-bottom: 5%;
+    }
+
+    .productos
+    {
+        margin: 5px 0;
+    }
+}
