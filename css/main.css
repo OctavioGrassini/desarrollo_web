@@ -20,7 +20,8 @@ header {
   grid-area: header; }
 
 .navbar {
-  display: none; }
+  display: none;
+  background-color: #24252a; }
 
 .header {
   display: flex;
@@ -87,6 +88,8 @@ header {
     text-decoration: none;
     list-style: none;
     padding: 5%; }
+  .offcanvas {
+    background-color: #24252a; }
   .offcanvas-title {
     color: white; }
   .offcanvas-header {
