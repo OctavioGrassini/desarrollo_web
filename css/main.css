@@ -112,25 +112,25 @@ footer {
     padding: 5px; }
 
 .class_footer {
-  display: flex;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   padding: 2%; }
-
-.footer_cell {
-  display: flex;
-  flex-direction: column; }
 
 .footer_content {
   padding: 10px; }
 
-@media only screen and (max-width: 900px) {
+.medios_pago {
+  height: 100%;
+  width: 75%; }
+
+@media only screen and (max-width: 650px) {
   .class_footer {
-    flex-direction: column;
-    align-items: center;
-    text-align: center; }
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    align-items: left;
+    text-align: left; }
   .footer_cell {
-    padding-top: 5%;
-    border-bottom: solid 2px #17171a; } }
+    padding-top: 5%; } }
 
 main {
   grid-area: main; }
