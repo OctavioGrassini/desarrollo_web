@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Grape+Nuts&family=Roboto:wght@100&display=swap');
 
 $gris1: #24252a;
+$spacing: 5px; 
 
 *{
     box-sizing: border-box;
@@ -26,6 +27,12 @@ body
     "main"
     "footer"
     ;
+}
+
+@mixin spacing ($padding, $margin) 
+{
+    padding: $padding;
+    margin: $margin;    
 }
 
 //Imports

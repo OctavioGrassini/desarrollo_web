@@ -1,14 +1,14 @@
 footer
 {
     grid-area: footer;
-    margin: 50px 0px 0px 0px;
+    margin: $spacing*10 0px 0px 0px;
     background-color: $gris1;
 
     h4
     {
         font-family: 'Roboto', sans-serif;
         color: #edf0f1;
-        padding: 0px 15px;
+        padding: 0px $spacing*3;
     }
 
     li
@@ -18,7 +18,7 @@ footer
         color: #edf0f1;
         text-decoration: none;
         list-style: none;
-        padding: 5px;
+        padding: $spacing;
     }
 }
 
@@ -31,7 +31,7 @@ footer
 
 .footer_content
 {
-    padding: 10px;
+    padding: $spacing*2;
 }
 
 .medios_pago

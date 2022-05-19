@@ -69,18 +69,18 @@ header {
   .navbar {
     display: block; }
   .responsive_li {
-    text-align: center;
-    margin: 10px 0;
     padding: 3% 0;
+    margin: 10px 0;
+    text-align: center;
     background-color: #3233387c;
     border-radius: 10px; }
   .navbar-brand {
+    padding: 1% 3%;
+    margin: 1% 0;
     font-family: 'Grape Nuts', cursive;
     color: #cccccc;
     font-size: 25px;
     text-shadow: 1px 1px 3px #cccccc;
-    padding: 1% 3%;
-    margin: 1% 0;
     border-radius: 15px; }
   .nav-item a {
     font-family: 'Nunito', sans-serif;
@@ -145,23 +145,23 @@ main {
     color: #24252a; }
 
 h1 {
+  padding: 10px;
+  margin: 0px 20px 15px;
   font-family: 'Grape Nuts', cursive;
   color: #353538;
   font-size: 60px;
   font-weight: 600;
-  padding: 10px;
-  margin: 0px 20px 15px;
   text-align: center;
   text-shadow: 1px 5px 8px whitesmoke, 1px 1px 5px #35353850; }
 
 .centro {
+  padding: 5px;
+  margin: 0px 100px;
   background-color: whitesmoke;
   background-size: cover;
   background-position: center;
   box-shadow: 0px 5px 15px #323338;
   border-radius: 7px;
-  margin: 0px 100px;
-  padding: 5px;
   display: grid;
   grid-template-areas: "section_1" "section_2" "section_3" "section_4";
   animation-name: fade-in;
@@ -173,39 +173,28 @@ h1 {
   object-fit: contain;
   border-radius: 7px; }
 
-.section_1 {
-  grid-area: section_1;
-  display: flex;
+.section_x, .section_1, .section_2, .section_3, .section_4 {
   padding: 5%;
-  margin: 2%;
+  margin: 3%;
+  display: flex;
   background-color: #32333828;
-  border-radius: 7px; }
+  border-radius: 7px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; }
+  .section_x img, .section_1 img, .section_2 img, .section_3 img, .section_4 img {
+    padding-bottom: 6%;
+    max-width: 100%;
+    border-radius: 15px; }
+
+.section_1 {
+  grid-area: section_1; }
 
 .section_2 {
-  grid-area: section_2;
-  display: flex;
-  padding: 5%;
-  margin: 2%;
-  background-color: #32333828;
-  border-radius: 7px;
-  flex-direction: row-reverse; }
+  grid-area: section_2; }
 
 .section_3 {
-  grid-area: section_3;
-  display: flex;
-  padding: 5%;
-  margin: 2%;
-  background-color: #32333828;
-  border-radius: 7px; }
-
-.section_4 {
-  grid-area: section_4;
-  display: flex;
-  padding: 5%;
-  margin: 2%;
-  background-color: #32333828;
-  border-radius: 7px;
-  flex-direction: row-reverse; }
+  grid-area: section_3; }
 
 .sub_section {
   display: flex;
@@ -230,8 +219,8 @@ h1 {
   grid-template-columns: 1.2fr 1fr; }
 
 .carousel {
-  margin: 5%;
-  padding: 10px; }
+  padding: 10px;
+  margin: 5%; }
   .carousel img {
     border-radius: 15px;
     border-style: solid;
@@ -244,7 +233,7 @@ h1 {
     text-shadow: 1px 2px 3px whitesmoke; }
 
 .categoria {
-  color: #cacaca;
+  color: #e7e6e6;
   text-shadow: 1px 3px 3px #000000, 1px 3px 3px #272727;
   font-family: 'Nunito', sans-serif;
   font-size: 35px;
@@ -262,9 +251,9 @@ h1 {
   justify-content: center; }
 
 .aside_item {
-  color: whitesmoke;
   padding: 5%;
-  margin: 5%; }
+  margin: 5%;
+  color: whitesmoke; }
   .aside_item p {
     text-align: center;
     font-size: 20px; }
@@ -297,15 +286,6 @@ h1 {
     display: block; }
   .categoria_responsive {
     font-weight: 600; }
-  .section_1, .section_2, .section_3, .section_4 {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin: 2%, 50px; }
-    .section_1 img, .section_2 img, .section_3 img, .section_4 img {
-      padding-bottom: 6%;
-      max-width: 100%;
-      border-radius: 15px; }
   .sub_section {
     padding-bottom: 5%; }
   p {
@@ -328,8 +308,8 @@ h1 {
     background-color: #32333852;
     border-radius: 7px; }
   .item h5 {
-    margin: 5%;
     padding: 5%;
+    margin: 5%;
     font-family: 'Grape Nuts', cursive;
     font-size: 25px;
     background-color: #32333837; }
@@ -373,47 +353,70 @@ h1 {
   .galeria {
     margin: 0px 30px; } }
 
-.instrucciones h3 {
-  font-family: 'Nunito', sans-serif;
-  font-size: 35px;
-  padding: 10px;
-  background-color: #32333842;
-  margin: 20px 20px 0px 0px; }
+.instrucciones {
+  display: flex;
+  justify-content: space-around; }
+  .instrucciones h3 {
+    padding: 10px;
+    margin: 20px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 35px; }
+  .instrucciones li {
+    list-style: none;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: white;
+    margin: 2% 4% 2% 2%;
+    text-align: left;
+    text-decoration: none; }
 
-.instrucciones li {
-  list-style: none;
-  font-family: 'Nunito', sans-serif;
-  font-weight: 500;
-  font-size: 20px;
-  color: #24252a;
-  text-decoration: none;
-  padding-bottom: 10px; }
+.compra_x, .compra_wsp, .compra_ig {
+  margin: 7.5px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px; }
 
 .compra_wsp {
-  margin: 15px 25px;
-  display: flex;
-  flex-direction: column; }
+  background-color: #075E54; }
+  .compra_wsp h3 {
+    color: #25D366;
+    background-color: #128C7E;
+    border-radius: 5px; }
+  .compra_wsp a {
+    color: #25D366; }
 
 .compra_ig {
-  margin: 15px 25px;
-  display: flex;
-  flex-direction: column; }
+  background-image: linear-gradient(#405DE6 2%, #C13584 20%, #F56040 80%, #FCAF45 98%); }
+  .compra_ig h3 {
+    color: #292929;
+    border-radius: 5px;
+    font-weight: 600;
+    background-color: #e6e6e654; }
+  .compra_ig a {
+    color: white;
+    font-size: 600; }
+
+@media only screen and (max-width: 900px) {
+  .instrucciones {
+    flex-direction: column; } }
 
 .contacto {
   display: flex;
   justify-content: space-between; }
 
 .form {
+  padding: 20px;
   margin: 10px;
   display: flex;
   justify-content: left;
   flex-direction: column;
   align-items: flex-start;
-  width: auto;
-  padding: 20px; }
+  width: auto; }
   .form .input {
     padding: 15px;
-    margin-top: 1%; }
+    margin-top: 1%;
+    width: 40%; }
   .form h2 {
     font-family: 'Nunito', sans-serif;
     font-size: 30px;
@@ -424,13 +427,13 @@ h1 {
     font-size: 20px; }
 
 .contact_info {
+  padding: 20px;
   margin: 10px;
   display: flex;
   justify-content: left;
   flex-direction: column;
   align-items: flex-start;
-  width: auto;
-  padding: 20px; }
+  width: auto; }
   .contact_info h2 {
     font-family: 'Nunito', sans-serif;
     font-size: 30px;
@@ -445,13 +448,13 @@ h1 {
     padding-top: 20px; }
 
 .centro_contacto {
+  padding: 5px;
+  margin: 0 100px;
   background-color: whitesmoke;
   background-size: cover;
   background-position: center;
   box-shadow: 0px 5px 15px #323338;
   border-radius: 7px;
-  margin: 0px 100px;
-  padding: 5px;
   animation-name: fade-in;
   animation-duration: .5s;
   animation-timing-function: ease-out; }
@@ -464,6 +467,20 @@ h1 {
     .form .input {
       margin-top: 8%;
       border-style: solid;
-      border-color: #3233389a;
       border-radius: 10px;
       width: 100%; } }
+
+.color-form_1 {
+  border-color: #ffc30f; }
+
+.color-form_2 {
+  border-color: #ff5733; }
+
+.color-form_3 {
+  border-color: #c70039; }
+
+.color-form_4 {
+  border-color: #900c3f; }
+
+.color-form_5 {
+  border-color: #581845; }

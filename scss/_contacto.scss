@@ -6,25 +6,26 @@
 
 .form
 {
-    margin: 10px;
+    @include spacing($spacing*4, $spacing*2);
+
     display: flex;
     justify-content:left;
     flex-direction: column;
     align-items: flex-start;
     width: auto;
-    padding: 20px;
 
     .input
     {
-        padding: 15px;
+        padding: $spacing*3;
         margin-top: 1%;
+        width: 40%;
     }
 
     h2
     {
         font-family: 'Nunito', sans-serif;
         font-size: 30px;
-        padding: 10px;
+        padding: $spacing*2;
         background-color: #32333842;
     }
 
@@ -37,19 +38,19 @@
 
 .contact_info
 {
-    margin: 10px;
+    @include spacing($spacing*4, $spacing*2);
+
     display: flex;
     justify-content:left;
     flex-direction: column;
     align-items: flex-start;
     width: auto;
-    padding: 20px;
 
     h2
     {
         font-family: 'Nunito', sans-serif;
         font-size: 30px;
-        padding: 10px;
+        padding: $spacing*2;
         background-color: #32333842;
     }
 
@@ -57,25 +58,25 @@
     {
         font-family: 'Nunito', sans-serif;
         font-size: 20px;
-        padding: 10px 0px;
+        padding: $spacing*2 0px;
         list-style: none;
     }
 
     ul
     {
-        padding-top: 20px;
+        padding-top: $spacing*4;
     }
 }
 
 .centro_contacto
 {
+    @include spacing($spacing, 0 $spacing*20);
+
     background-color: whitesmoke;
     background-size: cover;
     background-position: center;
     box-shadow: 0px 5px 15px #323338;
     border-radius: 7px;
-    margin: 0px 100px;
-    padding: 5px;
 
     animation-name: fade-in;
     animation-duration: .5s;
@@ -86,7 +87,7 @@
 {
     .centro_contacto
     {
-        margin: 0px 20px;
+        margin: 0px $spacing*4;
     }
 
     .form
@@ -97,9 +98,25 @@
         {
             margin-top: 8%;
             border-style: solid;
-            border-color: #3233389a;
             border-radius: 10px;
             width: 100%;
         }
     }
 }
+
+$color_form: 
+(
+    form_1: #ffc30f,
+    form_2: #ff5733,
+    form_3: #c70039,
+    form_4: #900c3f,
+    form_5: #581845,
+);
+
+ @each $form, $color in $color_form 
+ {
+    .color-#{$form}
+    {
+        border-color: $color;
+    }
+ }
