@@ -4,13 +4,13 @@
     align-items: flex-start;
     justify-content: space-around;
     flex-wrap: wrap;
-    margin: 40px 0px;
+    margin: $spacing*8 0px;
 }
 
 .item
 {
-    padding: 20px;
-    padding-bottom: 40px;
+    padding: $spacing*4;
+    padding-bottom: $spacing*8;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -23,8 +23,8 @@
 
     h5
     {
-        margin: 5%;
-        padding: 5%;
+        @include spacing(5%, 5%);
+        
         font-family: 'Grape Nuts', cursive;
         font-size: 25px;
         background-color: #32333837;
@@ -53,6 +53,6 @@
 
     .productos
     {
-        margin: 5px 0;
+        margin: $spacing 0;
     }
 }

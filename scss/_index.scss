@@ -23,25 +23,25 @@ main
 
 h1
 {
+    @include spacing($spacing*2, 0px $spacing*4 $spacing*3);
+
     font-family: 'Grape Nuts', cursive;
     color: #353538;
     font-size: 60px;
     font-weight: 600;
-    padding: 10px;
-    margin: 0px 20px 15px;
     text-align: center;
     text-shadow: 1px 5px 8px whitesmoke, 1px 1px 5px #35353850;
 }
 
 .centro
 {
+    @include spacing($spacing, 0px $spacing*20);
+
     background-color: whitesmoke;
     background-size: cover;
     background-position: center;
     box-shadow: 0px 5px 15px #323338;
     border-radius: 7px;
-    margin: 0px 100px;
-    padding: 5px;
     display: grid;
     
     grid-template-areas:
@@ -66,44 +66,35 @@ h1
     } 
 }
 
-.section_1
+.section_x
 {
-    grid-area: section_1;
+    @include spacing(5%, 3%);
+
     display: flex;
-    padding: 5%;
-    margin: 2%;
     background-color: #32333828;
     border-radius: 7px;
-}
-.section_2
-{
-    grid-area: section_2;
-    display: flex;
-    padding: 5%;
-    margin: 2%;
-    background-color: #32333828;
-    border-radius: 7px;
-    flex-direction: row-reverse;
-}
- .section_3
-{
-    grid-area: section_3;
-    display: flex;
-    padding: 5%;
-    margin: 2%;
-    background-color: #32333828;
-    border-radius: 7px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+        img
+        {
+            padding-bottom: 6%;
+            max-width: 100%;
+            border-radius: 15px;
+        }
 }
 
-.section_4
+@for $i from 1 to 4 {
+    .section_#{$i}
+    {
+        grid-area: section_#{$i};
+    }
+}
+
+.section_1, .section_2, .section_3, .section_4
 {
-    grid-area: section_4;
-    display: flex;
-    padding: 5%;
-    margin: 2%;
-    background-color: #32333828;
-    border-radius: 7px;
-    flex-direction: row-reverse;
+    @extend .section_x;
 }
 
 .sub_section
@@ -114,7 +105,7 @@ h1
 
 .sub_section p
 {
-    padding: 5px 50px;
+    padding: $spacing $spacing*10;
 }
 
 @keyframes fade-in
@@ -145,8 +136,7 @@ h1
 
 .carousel
 {
-    margin: 5%;
-    padding: 10px;   
+    @include spacing($spacing*2, 5%);
     
     img
     {
@@ -167,7 +157,7 @@ h1
 
 .categoria
 {
-    color: rgb(202, 202, 202);
+    color: rgb(231, 230, 230);
     text-shadow: 1px 3px 3px #000000, 1px 3px 3px #272727;
     font-family: 'Nunito', sans-serif;
     font-size: 35px;
@@ -190,9 +180,9 @@ h1
 
 .aside_item
 {
+    @include spacing(5%, 5%);
+
     color: whitesmoke;
-    padding: 5%;
-    margin: 5%;
 
     p
     {
@@ -230,7 +220,7 @@ h1
 {
     .centro
     {
-        margin: 0px 20px;
+        margin: 0px $spacing*4;
     }  
 }
 
@@ -256,28 +246,11 @@ h1
         font-weight: 600;
     }
     
-    .section_1, .section_2, .section_3, .section_4
-    {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        margin: 2%, 50px;
-    
-        img
-        {
-            padding-bottom: 6%;
-            max-width: 100%;
-            border-radius: 15px;
-        }
-    }
-    
     .sub_section
     {
         padding-bottom: 5%;
     }
-    
-    
-    
+     
     p
     {
         font-size: 20px;
