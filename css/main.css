@@ -401,39 +401,40 @@ h1 {
   .instrucciones {
     flex-direction: column; } }
 
-.contacto {
-  display: flex;
-  justify-content: space-between; }
-
 .form {
-  padding: 20px;
-  margin: 10px;
   display: flex;
   justify-content: left;
   flex-direction: column;
   align-items: flex-start;
-  width: auto; }
+  margin: 0;
+  width: 45%;
+  padding: 2.5%; }
   .form .input {
-    padding: 15px;
+    padding: 25px 0;
     margin-top: 1%;
-    width: 40%; }
+    width: 100%;
+    text-align: center; }
   .form h2 {
     font-family: 'Nunito', sans-serif;
     font-size: 30px;
     padding: 10px;
-    background-color: #32333842; }
+    background-color: #32333842;
+    align-self: center; }
   .form h3 {
     font-family: 'Nunito', sans-serif;
-    font-size: 20px; }
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+    padding: 5% 0; }
 
 .contact_info {
-  padding: 20px;
-  margin: 10px;
   display: flex;
   justify-content: left;
   flex-direction: column;
   align-items: flex-start;
-  width: auto; }
+  margin: 0;
+  width: 45%;
+  padding: 2.5%; }
   .contact_info h2 {
     font-family: 'Nunito', sans-serif;
     font-size: 30px;
@@ -455,20 +456,27 @@ h1 {
   background-position: center;
   box-shadow: 0px 5px 15px #323338;
   border-radius: 7px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
   animation-name: fade-in;
   animation-duration: .5s;
   animation-timing-function: ease-out; }
 
 @media only screen and (max-width: 1050px) {
   .centro_contacto {
-    margin: 0px 20px; }
+    margin: 0px 20px;
+    flex-direction: column; }
   .form {
-    align-items: center; }
+    width: 100%; }
     .form .input {
       margin-top: 8%;
       border-style: solid;
       border-radius: 10px;
-      width: 100%; } }
+      width: 100%; }
+  .contact_info {
+    width: 100%;
+    margin-top: 5%; } }
 
 .color-form_1 {
   border-color: #ffc30f; }
